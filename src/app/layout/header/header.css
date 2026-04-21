@@ -1,0 +1,50 @@
+.top-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 30px;
+  background-color: #233142; 
+  border-bottom: 1px solid #334155; 
+  color: white;
+}
+
+.header-title h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+  color: #f8fafc;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+.notification-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.notification-icon:hover {
+  opacity: 1; 
+}
+
+
+.avatar {
+  background-color: #3b82f6; 
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #cbd5e1;
+}

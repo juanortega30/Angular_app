@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100%; 
+  background-color: #233142;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  border-right: 1px solid #334155;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #233142; 
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  border-right: 1px solid #334155; 
+}
+
+/* Área del logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #334155;
+}
+
+.logo-icon {
+  background-color: #10b981; 
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+.app-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+}
+
+.nav-item {
+  padding: 15px 25px;
+  color: #94a3b8; 
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  border-left: 4px solid transparent; 
+}
+
+
+.nav-item:hover, .nav-item.active {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-left: 4px solid #10b981; 
+}
+

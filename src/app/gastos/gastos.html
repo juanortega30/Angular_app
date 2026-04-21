@@ -1,0 +1,57 @@
+<div class="header-gastos" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+  <h2>Listado de Gastos</h2>
+
+  <button class="btn-crear" (click)="abrirFormularioCrear()">
+    + Crear Nuevo Gasto
+  </button>
+</div>
+
+<table class="tabla-gastos" style="width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Monto</th>
+      <th>Fecha</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let gasto of listaDeGastos">
+      <td>{{ gasto.description }}</td>
+      <td>{{ gasto.amount | currency }}</td>
+      <td>{{ gasto.date | date:'shortDate' }}</td>
+      
+      <td>
+        <div class="menu-acciones">
+          <button class="btn-tres-puntos">⋮</button>
+          
+          <div class="dropdown-content">
+            <button (click)="actualizarGasto(gasto)">Actualizar</button>
+            <button (click)="borrarGasto(gasto.id)">Borrar</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="modal-fondo" *ngIf="mostrarModal">
+  <div class="modal-contenido">
+    <h3 style="margin-top: 0;">{{ gastoEditandoId ? 'Actualizar Gasto' : 'Crear Nuevo Gasto' }}</h3>
+
+    <div class="campo-form">
+      <label>Descripción del Gasto:</label>
+      <input type="text" [(ngModel)]="nuevoGasto.description" placeholder="Ej. Mercado, Gasolina...">
+    </div>
+
+    <div class="campo-form">
+      <label>Monto Total:</label>
+      <input type="number" [(ngModel)]="nuevoGasto.amount">
+    </div>
+
+    <div class="modal-acciones">
+      <button class="btn-cancelar" (click)="cerrarModal()">Cancelar</button>
+      <button class="btn-guardar" (click)="guardarGasto()">{{ gastoEditandoId ? 'Actualizar' : 'Guardar Gasto' }}</button>
+    </div>
+  </div>
+</div>
